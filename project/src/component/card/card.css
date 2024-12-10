@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+}
+
+.cardsWrapper{
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.cardContainer{
+  height: 17rem;
+  border-radius: 8px;
+  margin-block: 1rem;
+}
+
+.cardFlag, .cardInfo{
+  height: 50%;
+}
+
+.cardInfo{
+  background: #fff;
+  color: hsl(200, 15%, 8%);
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardInfo h3{
+  font-size: 1rem;
+  padding-bottom: 0.2rem;
+}
+
+.flag{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  cursor: pointer;
+}

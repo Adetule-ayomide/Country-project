@@ -1,0 +1,33 @@
+.search{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3rem;
+}
+
+.searchInput, #filter{
+    height: 2.5rem;
+    padding-inline: 1rem;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #858585;
+    border: 1px solid #ffffff;
+    box-shadow: 1px 1px #e6e6e6;
+}
+.searchInput{
+    width: 18rem;
+}
+
+@media screen and (max-width: 600px) {
+    #filter{
+        position: absolute;
+        right: 1rem;
+    }
+    .searchInput{
+        width: 12rem;
+        position: absolute;
+        left: 1rem;
+    }
+}

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.detailsWrapper {
+  width: 100%;
+  padding: 0 5rem 2rem 5rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 3.5rem;
+}
+
+.detailsFlag {
+  width: 40%;
+}
+
+.detailsFlag img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.detailsContainer {
+  width: 55%;
+  height: 90%;
+  padding-inline: 1rem;
+  line-height: 2;
+}
+
+.detailsContainer b{
+    font-size: 1.15rem;
+}
+
+.sec1{
+  height: 20%;
+  margin-bottom: 0.5rem;
+}
+
+.sec2{
+  min-height: 55%;
+  display: flex;
+  text-transform: capitalize;
+  gap: 4rem;
+}
+
+.sec3{
+  height: 20%;
+}
+
+.borders{
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.7rem 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: capitalize;
+}
+
+.border{
+  min-width: 5rem;
+  text-align: center;
+  background: #ffff;
+  color: #111517;
+  border: 1px solid #d8d7d7;
+  border-radius: 5px;
+  padding-inline: 0.2rem;
+}
+
+.loadingDetails {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.backBtn{
+  width: 6.5rem;
+  height: 2.5rem;
+  background: #fff;
+  color:  #111517;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1.5px 1.5px rgb(233, 224, 224);
+  text-align: center;
+}
+
+.backBtn a{
+  text-decoration: none;
+}
+
+.backBtn:hover{
+  background: rgb(239, 240, 240);
+  transition: linear 1s;
+}
+
+@media screen and (max-width: 800px){
+  .detailsWrapper {
+    display: block;
+    padding-inline: 2rem;
+  }
+  .detailsContainer{
+    width: 100%;
+  }
+  .detailsFlag {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .detailsFlag img{
+  width: 65%;
+}
+  .sec2{
+    display: block;
+  }
+  .subSec2{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+  .detailsWrapper{
+    padding-inline: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+  .detailsWrapper{
+    gap: 4rem;
+  }
+  .sec2{
+    display: block;
+  }
+  .subSec2{
+    display: flex;
+    flex-direction: column;
+  }
+}
