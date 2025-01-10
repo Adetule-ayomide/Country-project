@@ -10,18 +10,22 @@
 }
 
 .cardContainer{
-  height: 17rem;
+  height: 19rem;
   border-radius: 8px;
   margin-block: 1rem;
+  border-bottom: 1px solid rgba(107, 105, 105, 0.123);
+  border-inline: 0.2px solid rgba(107, 105, 105, 0.123);
 }
 
-.cardFlag, .cardInfo{
-  height: 50%;
+.cardFlag{
+  height: 55%;
 }
 
 .cardInfo{
-  background: #fff;
-  color: hsl(200, 15%, 8%);
+  height: 45%;
+}
+
+.cardInfo{
   padding-inline: 1rem;
   display: flex;
   flex-direction: column;

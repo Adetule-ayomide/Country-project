@@ -6,7 +6,7 @@ function Main() {
   return (
     <Routes>
       <Route path="/" element={<App />} /> 
-      <Route path="/country/:countryName" element={<DetailedCountry />} />
+      <Route path="/:countryName" element={<DetailedCountry />} />
     </Routes>
   );
 }

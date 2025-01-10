@@ -46,7 +46,7 @@ function App() {
   }
 
   const go = (countryName) => {
-    navigate(`/country/${countryName}`);
+    navigate(`/${countryName}`);
   };
 
   return (
@@ -63,7 +63,7 @@ function App() {
       ) : filterCountry.length > 0 ? (
         <div className="cardsWrapper">
           {filterCountry.map((data) => (
-            <div key={data.name} onClick={() => go(data.name)}>
+            <div key={data.name} onClick={() => go((data.name))}>
               <Card
                 flag={data.flag}
                 name={data.name}

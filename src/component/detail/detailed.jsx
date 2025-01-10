@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import Header from "../header/header";
 import DetailsWrapper from "./detailsCard";
 
+let borderName;
+
 function DetailedCountry() {
   const countryName = useParams();
   const [fullDetails, setFullDetails] = useState(null);
@@ -21,7 +23,7 @@ function DetailedCountry() {
         });
         setData(allData);
         selectedCountry && setFullDetails(selectedCountry);
-        console.log("Fetched data:....", data);
+        // console.log("Fetched data:....", data);
       })
       .catch((err) => console.error("Error fetching data", err));
   }, [countryName]);
@@ -49,19 +51,22 @@ function DetailedCountry() {
       ?.filter((country) => borderFullName?.includes(country?.alpha3Code))
       .map((country) => country?.name);
 
-    console.log(borderFullName);
-
     return myBorder;
   };
 
-  console.log(myBorder);
-  console.log(countryBorder());
+  countryBorder();
+
 
   if (!fullDetails) {
     return <h2 className="loadingDetails">Loading country details...</h2>;
   }
 
   const goBack = () => navigate("/")
+
+  const closeBorder = (e) => {
+    borderName = e.target.innerText;
+    navigate(`/${borderName}`)
+  }
 
   return (
     <div>
@@ -86,7 +91,7 @@ function DetailedCountry() {
             i == fullDetails.languages.length - 1 ? lang.name : lang.name + ", "
           )}
           border={myBorder.map((e, i) => (
-            <p key={i} className="border">
+            <p key={i} className="border" onClick={closeBorder}>
               {e}
             </p>
           ))}
